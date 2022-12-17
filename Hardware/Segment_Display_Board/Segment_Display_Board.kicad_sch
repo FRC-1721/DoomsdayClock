@@ -1104,6 +1104,9 @@
     (path "/5b3b94e9-8561-416b-92c8-c061c8d10891/9150b13f-4f98-413f-a2b4-cbe5f46608a6"
       (reference "SW204") (unit 1) (value "DAY_SUB") (footprint "Button_Switch_THT:SW_PUSH_6mm_H5mm")
     )
+    (path "/e578bf18-fecf-4fc4-8e6f-ece5d8a7ea5b/dfd915ac-5841-4d53-87f7-ab2a08809872"
+      (reference "TP501") (unit 1) (value "DP") (footprint "TestPoint:TestPoint_Pad_D1.5mm")
+    )
     (path "/5b3b94e9-8561-416b-92c8-c061c8d10891/70690d02-622a-4881-8b09-c04dbfd7454d"
       (reference "U201") (unit 1) (value "ATmega328P-A") (footprint "Package_QFP:TQFP-32_7x7mm_P0.8mm")
     )
