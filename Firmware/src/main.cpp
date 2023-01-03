@@ -7,6 +7,11 @@
 
 // Libs
 #include <Arduino.h>
+#include <ESP8266WiFi.h>
+#include <WiFiManager.h>
+
+// Wifi
+WiFiManager wifiManager;
 
 // Headers
 #include "boardPins.h"
@@ -15,7 +20,11 @@
 #include "display.h"
 
 // Objects
-Display display(3, LATCH_PIN, CLOCK_PIN, DATA_PIN);
+Display daySeg(3, LATCH_PIN, CLOCK_PIN, DATA_PIN);
+Display hourSeg(2, LATCH_PIN, CLOCK_PIN, DATA_PIN);
+Display minSeg(2, LATCH_PIN, CLOCK_PIN, DATA_PIN);
+Display secSeg(2, LATCH_PIN, CLOCK_PIN, DATA_PIN);
+Display displayOrder[4] = {daySeg, hourSeg, minSeg, secSeg};
 
 void setup()
 {
@@ -29,6 +38,9 @@ void setup()
     pinMode(LATCH_PIN, OUTPUT);
     pinMode(CLOCK_PIN, OUTPUT);
     pinMode(DATA_PIN, OUTPUT);
+
+    // Setup wifi
+    wifiManager.autoConnect("Doomsday-Counter"); // Hot Spot SSID
 }
 
 void loop()
